@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "JavaScript development practice",
   "scripts": {
+    "prestart": "node buildScripts/startMessage.js",
     "start": "node buildScripts/srcServer.js"
   },
   "author": "Dave Maurer",
