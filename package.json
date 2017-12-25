@@ -4,7 +4,7 @@
   "description": "JavaScript development practice",
   "scripts": {
     "prestart": "node buildScripts/startMessage.js",
-    "start": "node buildScripts/srcServer.js"
+    "start": "npm-run-all --parallel security-check open:src"
   },
   "author": "Dave Maurer",
   "license": "MIT",
