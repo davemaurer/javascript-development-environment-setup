@@ -4,7 +4,8 @@
   "description": "JavaScript development practice",
   "scripts": {
     "prestart": "node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel security-check open:src"
+    "start": "npm-run-all --parallel security-check open:src",
+    "security-check": "nsp check"
   },
   "author": "Dave Maurer",
   "license": "MIT",
