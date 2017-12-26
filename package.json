@@ -5,7 +5,10 @@
   "scripts": {
     "prestart": "node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel security-check open:src",
-    "security-check": "nsp check"
+    "open:src": "node buildScripts/srcServer.js",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 3000",
+    "share": "npm-run-all --parallel open:src localtunnel"
   },
   "author": "Dave Maurer",
   "license": "MIT",
