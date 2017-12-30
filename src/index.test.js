@@ -19,3 +19,9 @@ describe('index.html', () => {
     window.close();
   });
 });
+
+describe('', () => {
+  it('', () => {
+
+  });
+});
