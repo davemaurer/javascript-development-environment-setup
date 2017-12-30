@@ -2,7 +2,7 @@ export const schema = {
   "type": "object",
   "properties": {
     "users": {
-      "type: :array",
+      "type": "array",
       "minItems": 3,
       "maxItems": 5,
       "items": {
@@ -23,6 +23,7 @@ export const schema = {
           },
           "email": {
             "type": "string",
+            "format": "email",
             "faker": "internet.email"
           }
         },
