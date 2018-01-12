@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
   devtool: 'source-map',
@@ -17,10 +18,15 @@ export default {
       debug: true,
       noInfo: false
     }),
-    // minify JS
-    new webpack.optimize.UglifyJsPlugin(),
+    // Create HTML file that includes reference to bundled JS.
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      inject: true
+    }),
     // Eliminate duplicate packages when generating bundle
-    new webpack.optimize.DedupePlugin()
+    new webpack.optimize.DedupePlugin(),
+    // minify JS
+    new webpack.optimize.UglifyJsPlugin()
   ],
   module: {
     loaders: [
